@@ -22,6 +22,9 @@
     --text-body:#C8B89A;--line:rgba(184,151,106,0.18);
   }
   nav{background:rgba(20,18,16,.97);}
+  .nav-logo{color:var(--ink);}
+  .nav-links a{color:var(--ink);}
+  .nav-hamburger span{background:var(--ink);}
   .nav-drawer{background:rgba(20,18,16,.97);}
   body::after{opacity:.015;}
 }
@@ -196,7 +199,12 @@ nav{position:fixed;top:0;left:0;right:0;z-index:500;display:flex;align-items:cen
 .newsletter-band{background:var(--ink);padding:64px 72px;text-align:center;}
 .nl-title{font-family:'Playfair Display',serif;font-size:clamp(24px,3vw,32px);font-weight:700;color:var(--cream);margin-bottom:10px;}
 .nl-subtitle{font-family:'EB Garamond',serif;font-size:17px;font-style:italic;color:rgba(245,239,224,.48);margin-bottom:32px;}
-.nl-iframe-wrap{width:100%;max-width:540px;height:320px;margin:0 auto;overflow:hidden;}
+.nl-form{display:flex;max-width:420px;margin:0 auto;}
+.nl-input{flex:1;padding:14px 18px;background:rgba(255,255,255,.06);border:1px solid rgba(139,110,78,.3);border-right:none;color:var(--cream);font-family:'DM Sans',sans-serif;font-size:13px;outline:none;}
+.nl-input::placeholder{color:rgba(245,239,224,.3);}
+.nl-input:focus{border-color:var(--earth-light);}
+.nl-btn{padding:14px 24px;background:var(--earth);color:var(--cream);border:none;font-size:10px;letter-spacing:.15em;text-transform:uppercase;font-family:'DM Sans',sans-serif;font-weight:500;cursor:pointer;transition:background .2s;}
+.nl-btn:hover{background:var(--earth-light);}
 .nl-note{font-size:11px;color:rgba(245,239,224,.28);margin-top:12px;font-style:italic;}
 
 /* ── FOOTER ── */
@@ -275,7 +283,9 @@ footer{background:var(--ink);border-top:1px solid rgba(139,110,78,.1);padding:28
   .obra-item-text{flex:1;display:flex;flex-direction:column;}
 
   .newsletter-band{padding:44px 24px;}
-  .nl-iframe-wrap{height:400px;}
+  .nl-form{flex-direction:column;}
+  .nl-input{border-right:1px solid rgba(139,110,78,.3);border-bottom:none;}
+  .nl-btn{border-top:none;}
 
   footer{padding:24px 20px;}
   nav{padding:0 20px;}
@@ -629,15 +639,10 @@ section, header, footer, nav, div {
 <section class="newsletter-band" id="newsletter">
   <h2 class="nl-title">Sé el primero en saberlo.</h2>
   <p class="nl-subtitle">Fecha de publicación de Justo Bagüeste, nuevas entregas del Cuaderno y noticias del autor.</p>
-  <div class="nl-iframe-wrap">
-    <iframe
-      src="https://e3522075.sibforms.com/serve/MUIFADd3_f9VW6LnHG5yUSAvCKzBhwuw07QRv64dgcZzKAtMn4ydgwhRUjRl6OFIbDpeLLx-lKKoeIt2v5km91HlIsuqaPTxdMzApw4amrf9Z-eQkc6jrnoUp-hBkcD-HcULjiTjtLLb8asXVe5JgjthnBiaWIufydk4wRB-FaTynMW9BqVTPn9meADoHAqGqiFFxBx9k91a3eCkDw=="
-      title="Formulario de suscripción"
-      sandbox="allow-forms allow-scripts allow-same-origin allow-popups"
-      loading="lazy"
-      style="border:none;width:100%;height:100%;display:block;">
-    </iframe>
-  </div>
+  <form class="nl-form" id="nlForm">
+    <input type="email" class="nl-input" name="EMAIL" placeholder="tu@email.com" autocomplete="email" required>
+    <button type="submit" class="nl-btn">Apuntarme</button>
+  </form>
   <p class="nl-note">Sin spam. Solo lo que importa, cuando importa.</p>
 </section>
 
@@ -845,6 +850,51 @@ document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
         renderCuaderno(items);
       });
     }
+  });
+})();
+</script>
+<script>
+// ── NEWSLETTER (Brevo) ──────────────────────────────────────────
+(function() {
+  var BREVO_URL = 'https://e3522075.sibforms.com/serve/MUIFADd3_f9VW6LnHG5yUSAvCKzBhwuw07QRv64dgcZzKAtMn4ydgwhRUjRl6OFIbDpeLLx-lKKoeIt2v5km91HlIsuqaPTxdMzApw4amrf9Z-eQkc6jrnoUp-hBkcD-HcULjiTjtLLb8asXVe5JgjthnBiaWIufydk4wRB-FaTynMW9BqVTPn9meADoHAqGqiFFxBx9k91a3eCkDw==';
+
+  document.addEventListener('DOMContentLoaded', function() {
+    var form = document.getElementById('nlForm');
+    if (!form) return;
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      var emailInput = form.querySelector('input[type="email"]');
+      var btn = form.querySelector('button[type="submit"]');
+      var email = emailInput ? emailInput.value.trim() : '';
+
+      if (!email || !email.includes('@')) {
+        emailInput.style.borderColor = 'var(--rust)';
+        return;
+      }
+
+      btn.textContent = '...';
+      btn.disabled = true;
+
+      fetch(BREVO_URL, {
+        method: 'POST',
+        headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+        body: new URLSearchParams({EMAIL: email, email_address_check: '', locale: 'es'})
+      })
+      .then(function() {
+        form.style.opacity = '0.3';
+        form.style.pointerEvents = 'none';
+        var msg = document.createElement('p');
+        msg.style.cssText = "font-family:'EB Garamond',serif;font-size:18px;font-style:italic;color:var(--earth-light);margin-top:16px;";
+        msg.textContent = '✓ ¡Apuntado! Te avisamos en cuanto salga el libro.';
+        form.insertAdjacentElement('afterend', msg);
+      })
+      .catch(function() {
+        btn.textContent = 'Apuntarme';
+        btn.disabled = false;
+        emailInput.style.borderColor = 'var(--rust)';
+      });
+    });
   });
 })();
 </script>
