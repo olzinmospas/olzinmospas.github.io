@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Suscripción confirmada — Antonio Romeo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,400&family=DM+Sans:wght@300;400&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:     #0f0e0c;
+      --bg2:    #181512;
+      --cream:  #e8dfc8;
+      --dim:    #a89f8c;
+      --gold:   #c8a96e;
+      --border: rgba(200, 169, 110, 0.18);
+    }
+
+    html {
+      min-height: 100%;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--cream);
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 300;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 3rem 1.5rem;
+      position: relative;
+      /* Sin overflow:hidden para que el contenido no quede cortado */
+    }
+
+    /* Glow decorativo — fixed para que no interfiera con el scroll */
+    .bg-glow {
+      position: fixed;
+      width: 700px;
+      height: 700px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(200,169,110,0.08) 0%, transparent 65%);
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .wrap {
+      position: relative;
+      z-index: 1;
+      max-width: 560px;
+      width: 100%;
+      text-align: center;
+      animation: fadeUp 0.9s ease both;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(28px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Ornamento superior */
+    .ornament {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.75rem;
+      margin-bottom: 2.5rem;
+      color: var(--gold);
+      font-size: 0.7rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+    }
+    .ornament::before,
+    .ornament::after {
+      content: '';
+      flex: 1;
+      max-width: 60px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold));
+    }
+    .ornament::after {
+      background: linear-gradient(90deg, var(--gold), transparent);
+    }
+
+    /* Icono check */
+    .icon-wrap {
+      width: 80px;
+      height: 80px;
+      border: 1px solid rgba(200, 169, 110, 0.3);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 2rem;
+      background: var(--bg2);
+    }
+    .icon-wrap svg {
+      width: 34px;
+      height: 34px;
+      stroke: var(--gold);
+      fill: none;
+      stroke-width: 1.8;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+    .check-path {
+      stroke-dasharray: 30;
+      stroke-dashoffset: 30;
+      animation: drawCheck 0.6s 0.4s ease forwards;
+    }
+    @keyframes drawCheck {
+      to { stroke-dashoffset: 0; }
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 400;
+      font-size: clamp(1.7rem, 4vw, 2.4rem);
+      line-height: 1.2;
+      margin-bottom: 1.25rem;
+    }
+    h1 em { font-style: italic; color: var(--gold); }
+
+    p {
+      font-size: 1rem;
+      line-height: 1.8;
+      color: var(--dim);
+      margin-bottom: 1rem;
+    }
+
+    .divider {
+      width: 40px;
+      height: 1px;
+      background: var(--gold);
+      margin: 2rem auto;
+      opacity: 0.4;
+    }
+
+    /* Caja "Lo que recibirás" */
+    .expect {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      padding: 1.5rem 1.75rem;
+      text-align: left;
+      margin-bottom: 0.5rem;
+    }
+    .expect-title {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-size: 0.9rem;
+      color: var(--gold);
+      margin-bottom: 1rem;
+    }
+    .expect-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.65rem;
+    }
+    .expect-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      font-size: 0.88rem;
+      color: var(--dim);
+      line-height: 1.55;
+    }
+    .expect-list li::before {
+      content: '—';
+      color: var(--gold);
+      opacity: 0.7;
+      flex-shrink: 0;
+    }
+
+    /* Enlace volver */
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-top: 2.5rem;
+      color: var(--gold);
+      text-decoration: none;
+      font-size: 0.85rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      transition: opacity 0.2s;
+    }
+    .back-link:hover { opacity: 0.7; }
+    .back-link svg {
+      width: 14px;
+      height: 14px;
+      stroke: var(--gold);
+      fill: none;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      transition: transform 0.2s;
+    }
+    .back-link:hover svg { transform: translateX(-3px); }
+
+    .signature {
+      margin-top: 3rem;
+      margin-bottom: 1rem;
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-size: 0.9rem;
+      color: var(--dim);
+      opacity: 0.45;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="bg-glow"></div>
+
+  <div class="wrap">
+    <div class="ornament">Antonio Romeo</div>
+
+    <div class="icon-wrap">
+      <svg viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="9"/>
+        <polyline class="check-path" points="8,12 11,15 16,9"/>
+      </svg>
+    </div>
+
+    <h1>Ya eres parte<br>de <em>este viaje</em></h1>
+
+    <p>Tu suscripción ha sido confirmada. Bienvenido a un espacio donde la crónica, la literatura y la memoria conversan sin prisas.</p>
+
+    <div class="divider"></div>
+
+    <div class="expect">
+      <div class="expect-title">Lo que recibirás</div>
+      <ul class="expect-list">
+        <li>Novedades sobre <em style="font-family:'Playfair Display',serif; color:var(--cream);">Impulso Psicodelia Distorsión</em> antes que nadie</li>
+        <li>Crónicas y textos seleccionados de la Hemeroteca</li>
+        <li>Reflexiones sobre escritura, memoria y el oficio de contar</li>
+        <li>Información sobre presentaciones y eventos literarios</li>
+      </ul>
+    </div>
+
+    <a class="back-link" href="index.html">
+      <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+      Volver al inicio
+    </a>
+
+    <div class="signature">— Antonio Romeo</div>
+  </div>
+
+</body>
+</html>
