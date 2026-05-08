@@ -76,15 +76,6 @@ nav{position:sticky;top:0;left:0;right:0;z-index:9000;display:flex;align-items:c
 .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease;}
 .reveal.visible{opacity:1;transform:none;}
 
-/* NEXT BOOK TEASER */
-.next-book{background:var(--ink);padding:72px;text-align:center;}
-.nb-eyebrow{font-size:9px;letter-spacing:.24em;text-transform:uppercase;color:var(--earth-light);margin-bottom:16px;}
-.nb-title{font-family:'Playfair Display',serif;font-size:clamp(32px,5vw,60px);font-weight:900;color:var(--cream);line-height:1.05;margin-bottom:10px;}
-.nb-title em{font-style:italic;color:var(--earth-light);}
-.nb-sub{font-family:'EB Garamond',serif;font-size:17px;font-style:italic;color:rgba(245,239,224,.4);margin-bottom:36px;}
-.nb-cta{display:inline-flex;align-items:center;gap:10px;border:1px solid rgba(245,239,224,.2);color:rgba(245,239,224,.65);padding:13px 24px;font-size:10px;letter-spacing:.15em;text-transform:uppercase;text-decoration:none;transition:all .2s;font-family:'DM Sans',sans-serif;}
-.nb-cta:hover{border-color:var(--earth-light);color:var(--earth-light);}
-
 /* NEWSLETTER */
 .newsletter-band{background:var(--ink);padding:64px 72px;text-align:center;}
 .nl-wrapper{max-width:520px;margin:0 auto;}
@@ -120,7 +111,7 @@ footer{background:var(--ink);border-top:1px solid rgba(139,110,78,.1);padding:24
 /* RESPONSIVE */
 @media(max-width:1024px){
   nav{padding:16px 24px;} .nav-links{display:none;} .nav-hamburger{display:flex;}
-  .page-header,.obra-body,.next-book,.newsletter-band{padding-left:32px;padding-right:32px;}
+  .page-header,.obra-body,.newsletter-band{padding-left:32px;padding-right:32px;}
   .book-entry,.book-entry.reverse{grid-template-columns:220px 1fr;gap:40px;}
   footer{padding:20px 32px;flex-direction:column;text-align:center;} .footer-nav{justify-content:center;}
 }
@@ -130,7 +121,7 @@ footer{background:var(--ink);border-top:1px solid rgba(139,110,78,.1);padding:24
   .book-entry,.book-entry.reverse{grid-template-columns:1fr;gap:24px;}
   .book-entry.reverse .book-cover-col,.book-entry.reverse .book-info-col{order:unset;}
   .book-cover{max-width:200px;}
-  .next-book,.newsletter-band{padding:44px 24px;}
+  .newsletter-band{padding:44px 24px;}
   .nl-form-row{flex-direction:column;}
   .nl-input{border-right:1px solid rgba(139,110,78,.3);border-bottom:none;}
   footer{padding:20px 24px;}
@@ -182,8 +173,6 @@ section, header, footer, nav, div {
 <nav id="nav">
   <a href="../index.html" class="nav-logo">Antonio Romeo</a>
   <ul class="nav-links">
-    <li><a href="../index.html#sobre-el-autor">The Author</a></li>
-    <li><a href="../index.html#justo-bagueste">New Book</a></li>
     <li><a href="../cuaderno/index.html">Notebook</a></li>
     <li><a href="../hemeroteca/index.html">Press Archive</a></li>
     <li><a href="index.html" class="active">Works</a></li>
@@ -195,12 +184,10 @@ section, header, footer, nav, div {
 <div class="lang-switch"><a href="../../obra/index.html">ES</a><span>|</span><a href="index.html" class="active">EN</a><span>|</span><a href="../../pt/obra/index.html">PT</a></div>
 </nav>
 <ul class="nav-drawer" id="navDrawer">
-  <li><a href="../index.html#sobre-el-autor">The Author</a></li>
-  <li><a href="../index.html#justo-bagueste">New Book</a></li>
   <li><a href="../cuaderno/index.html">Notebook</a></li>
   <li><a href="../hemeroteca/index.html">Press Archive</a></li>
   <li><a href="index.html">Works</a></li>
-  <li><a href="../index.html#newsletter">Notify me about the book</a></li>
+  <li><a href="../index.html#newsletter">Notify me</a></li>
 </ul>
 
 <!-- HEADER -->
@@ -324,19 +311,11 @@ section, header, footer, nav, div {
 
 </div>
 
-<!-- PRÓXIMO: JUSTO BAGÜESTE -->
-<div class="next-book">
-  <p class="nb-eyebrow">June 2026</p>
-  <h2 class="nb-title">Impulso. <em>Psicodelia.</em> Distorsión.</h2>
-  <p class="nb-sub">Life and Work of Justo Bagüeste — The biography that took fourteen years to write.</p>
-  <a href="../justo-bagueste.html" class="nb-cta">Discover the book →</a>
-</div>
-
 <!-- NEWSLETTER -->
 <section class="newsletter-band" id="newsletter">
   <div class="nl-wrapper">
     <h2 class="nl-title">Be the first to know.</h2>
-    <p class="nl-subtitle">Fecha de publicación de Justo Bagüeste, nuevas entregas del Notebook y noticias del autor.</p>
+    <p class="nl-subtitle">New entries from the Notebook and news from the author.</p>
 
     <!-- Brevo Form -->
     <div class="sib-form" style="text-align:center;">
@@ -348,7 +327,7 @@ section, header, footer, nav, div {
         </div>
         <div id="success-message" class="sib-form-message-panel" style="font-size:14px; text-align:center; font-family:'DM Sans',sans-serif; color:#5cb85c; background-color:rgba(92,184,92,.1); border-radius:3px; border:1px solid rgba(92,184,92,.3); max-width:480px; margin:0 auto 16px; display:none;">
           <div class="sib-form-message-panel__text sib-form-message-panel__text--center">
-            <span class="sib-form-message-panel__inner-text">✓ ¡Apuntado! Te avisamos en cuanto salga el libro.</span>
+            <span class="sib-form-message-panel__inner-text">✓ Subscribed! We'll be in touch soon.</span>
           </div>
         </div>
         <div id="sib-container" class="sib-container--large sib-container--vertical" style="text-align:center; background-color:transparent; max-width:480px; margin:0 auto; border:none; direction:ltr;">
@@ -384,7 +363,6 @@ section, header, footer, nav, div {
 <footer>
   <a href="../index.html" class="footer-logo">Antonio Romeo</a>
   <nav class="footer-nav">
-    <a href="../index.html#sobre-el-autor">The author</a>
     <a href="../cuaderno/index.html">Notebook</a>
     <a href="../hemeroteca/index.html">Press Archive</a>
     <a href="index.html">Works</a>
