@@ -178,6 +178,18 @@ nav{position:sticky;top:0;left:0;right:0;z-index:9000;display:flex;align-items:c
 .nl-brevo-legal{font-size:10px;color:rgba(245,239,224,.18);margin-top:8px;}
 .nl-brevo-legal a{color:rgba(245,239,224,.28);text-decoration:underline;}
 .nl-brevo-legal a:hover{color:var(--earth-light);}
+
+/* ── APOYO / CAFÉ ── */
+.apoyo-strip{background:var(--cream-dark);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:56px 72px;}
+.apoyo-inner{max-width:620px;margin:0 auto;text-align:center;}
+.apoyo-title{font-family:'Playfair Display',serif;font-size:clamp(22px,2.6vw,30px);font-weight:700;color:var(--ink);line-height:1.15;margin-bottom:12px;}
+.apoyo-title em{font-style:italic;color:var(--rust);}
+.apoyo-text{font-family:'EB Garamond',serif;font-size:clamp(15px,1.6vw,17px);font-style:italic;line-height:1.75;color:var(--text-body);margin-bottom:28px;}
+.apoyo-btn{display:inline-flex;align-items:center;gap:10px;padding:14px 30px;background:transparent;border:1px solid var(--ink);color:var(--ink);font-family:'DM Sans',sans-serif;font-size:10.5px;letter-spacing:.15em;text-transform:uppercase;font-weight:500;text-decoration:none;transition:background .2s,color .2s,border-color .2s;}
+.apoyo-btn::after{content:'↗';font-size:12px;letter-spacing:0;}
+.apoyo-btn:hover,.apoyo-btn:focus-visible{background:var(--rust);border-color:var(--rust);color:var(--cream);}
+.apoyo-btn:focus-visible{outline:2px solid var(--earth);outline-offset:3px;}
+.apoyo-note{font-family:'EB Garamond',serif;font-size:12px;font-style:italic;color:var(--earth);opacity:.65;margin-top:16px;}
 .sib-form-message-panel{padding:12px 16px;margin-bottom:16px;border-radius:3px;}
 .input--hidden{position:absolute;left:-9999px;}
 #sib-container{border:none!important;padding:0!important;}
@@ -215,6 +227,7 @@ footer{background:var(--ink);border-top:1px solid rgba(139,110,78,.1);padding:28
   .obra-grid{grid-template-columns:repeat(2,1fr);gap:20px;}
 
   .newsletter-band{padding:52px 32px;}
+  .apoyo-strip{padding:48px 32px;}
   footer{padding:24px 32px;flex-direction:column;text-align:center;}
   .footer-nav{justify-content:center;}
 }
@@ -245,6 +258,7 @@ footer{background:var(--ink);border-top:1px solid rgba(139,110,78,.1);padding:28
   .obra-item-text{flex:1;display:flex;flex-direction:column;}
 
   .newsletter-band{padding:44px 24px;}
+  .apoyo-strip{padding:40px 24px;}
   .nl-form-row{flex-direction:column;}
   .nl-input{border-right:1px solid rgba(139,110,78,.3);border-bottom:none;}
   .nl-btn{border-top:none;}
@@ -555,6 +569,17 @@ section, header, footer, nav, div {
     </div>
 </section>
 
+<!-- ── APOYO ── -->
+<section class="apoyo-strip" id="apoyo">
+  <div class="apoyo-inner reveal">
+    <p class="eyebrow" style="justify-content:center;">Apoyo</p>
+    <h2 class="apoyo-title">Invítame a un <em>café</em></h2>
+    <p class="apoyo-text">Los textos del Cuaderno son gratuitos y van a seguir siéndolo. Si alguno te ha hecho compañía un rato, puedes invitarme a un café.</p>
+    <a class="apoyo-btn" href="https://buymeacoffee.com/olzinmospas" target="_blank" rel="noopener">Invitar a un café</a>
+    <p class="apoyo-note">Pago seguro a través de Buy Me a Coffee. Sin suscripción.</p>
+  </div>
+</section>
+
 <!-- ── NEWSLETTER ── -->
 <section class="newsletter-band" id="newsletter">
   <div class="nl-wrapper">
@@ -611,6 +636,7 @@ section, header, footer, nav, div {
     <a href="cuaderno/index.html">Cuaderno</a>
     <a href="hemeroteca/index.html">Hemeroteca</a>
     <a href="obra/index.html">Obra</a>
+    <a href="#apoyo">Café</a>
     <a href="#newsletter">Contacto</a>
   </nav>
   <p class="footer-copy">© 2026 Antonio Romeo Fernández</p>
