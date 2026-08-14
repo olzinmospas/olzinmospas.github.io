@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<title>About — Antonio Romeo</title>
+<meta name="description" content="Biography, journalistic career and bibliography of Antonio Romeo Fernández. Contact for commissions and collaborations.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/site.css">
+<style>
+/* ═══ SOBRE MÍ ════════════════════════════════════════════════════ */
+.sb-hero{display:grid;grid-template-columns:1fr 420px;gap:var(--sp-6);
+  max-width:1180px;margin:0 auto;padding:var(--sp-7) var(--sp-6) var(--sp-6);align-items:center;}
+.sb-eyebrow{font-size:var(--fs-xs);letter-spacing:.22em;text-transform:uppercase;
+  color:var(--earth);margin-bottom:var(--sp-3);display:flex;align-items:center;gap:14px;}
+.sb-eyebrow::before{content:'';width:36px;height:1px;background:var(--earth);}
+.sb-name{font-family:'Playfair Display',serif;font-weight:900;color:var(--ink);
+  font-size:clamp(2.5rem,5.5vw,4rem);line-height:.98;margin-bottom:var(--sp-3);letter-spacing:-.015em;}
+.sb-lede{font-family:'EB Garamond',serif;font-style:italic;font-size:var(--fs-md);
+  line-height:1.6;color:var(--earth);max-width:34ch;}
+.sb-portrait img{width:100%;height:auto;display:block;box-shadow:0 20px 60px rgba(20,18,16,.18);}
+.sb-body{max-width:1180px;margin:0 auto;padding:0 var(--sp-6) var(--sp-7);}
+.sb-block{margin-bottom:var(--sp-7);}
+.sb-h2{font-family:'Playfair Display',serif;font-size:clamp(1.5rem,3vw,2.0625rem);
+  font-weight:700;color:var(--ink);margin-bottom:var(--sp-3);}
+.sb-h2 em{font-style:italic;color:var(--earth);}
+.sb-p{font-family:'EB Garamond',serif;font-size:1.1875rem;line-height:1.8;
+  color:var(--text-body);margin-bottom:1.1em;text-wrap:pretty;max-width:66ch;}
+.sb-p em{font-style:italic;}
+.sb-p strong{font-weight:500;color:var(--ink);}
+.sb-list{list-style:none;border-top:1px solid var(--line);}
+.sb-list li{border-bottom:1px solid var(--line);padding:var(--sp-3) 0;
+  display:grid;grid-template-columns:190px 1fr;gap:var(--sp-3);align-items:baseline;}
+.sb-list .k{font-size:var(--fs-xs);letter-spacing:.14em;text-transform:uppercase;color:var(--earth);}
+.sb-list .v{font-family:'EB Garamond',serif;font-size:1.0625rem;line-height:1.6;color:var(--text-body);}
+.sb-list .v strong{font-weight:500;color:var(--ink);}
+.sb-books{list-style:none;border-top:1px solid var(--line);}
+.sb-books li{border-bottom:1px solid var(--line);padding:var(--sp-3) 0;
+  display:flex;justify-content:space-between;gap:var(--sp-3);align-items:baseline;flex-wrap:wrap;}
+.sb-books .t{font-family:'Playfair Display',serif;font-size:1.125rem;font-weight:700;color:var(--ink);}
+.sb-books .m{font-size:var(--fs-xs);letter-spacing:.14em;text-transform:uppercase;color:var(--earth);}
+.sb-books a{color:inherit;text-decoration:none;}
+.sb-books li:hover .t{color:var(--rust);}
+.sb-cta{background:var(--ink);padding:var(--sp-5) var(--sp-6);margin-top:var(--sp-3);}
+.sb-cta h3{font-family:'Playfair Display',serif;font-size:1.5rem;color:var(--cream);
+  font-weight:700;margin-bottom:var(--sp-2);}
+.sb-cta p{font-family:'EB Garamond',serif;font-size:1.0625rem;line-height:1.7;
+  color:var(--on-ink);margin-bottom:var(--sp-3);}
+.sb-mail{display:inline-block;font-family:'DM Sans',sans-serif;font-size:var(--fs-xs);
+  letter-spacing:.15em;text-transform:uppercase;background:var(--earth);color:var(--cream);
+  padding:14px 26px;text-decoration:none;transition:background .2s;}
+.sb-mail:hover{background:var(--earth-light);}
+.sb-press{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:1px;background:var(--line);border:1px solid var(--line);}
+.sb-press a{background:var(--paper);padding:var(--sp-3);text-decoration:none;color:inherit;
+  transition:background .2s;display:block;}
+.sb-press a:hover{background:var(--cream-dark);}
+.sb-press .k{font-size:var(--fs-xs);letter-spacing:.14em;text-transform:uppercase;
+  color:var(--earth);display:block;margin-bottom:6px;}
+.sb-press .v{font-family:'EB Garamond',serif;font-size:1.0625rem;color:var(--ink);}
+.sb-note{font-family:'EB Garamond',serif;font-style:italic;font-size:var(--fs-sm);
+  color:var(--earth);margin-top:var(--sp-2);}
+@media(max-width:900px){
+  .sb-hero{grid-template-columns:1fr;padding:var(--sp-6) var(--sp-4) var(--sp-5);gap:var(--sp-4);}
+  .sb-portrait{max-width:320px;}
+  .sb-body{padding:0 var(--sp-4) var(--sp-6);}
+  .sb-list li{grid-template-columns:1fr;gap:6px;}
+}
+@media(max-width:600px){
+  .sb-hero{padding:var(--sp-5) var(--sp-3) var(--sp-4);}
+  .sb-body{padding:0 var(--sp-3) var(--sp-5);}
+  .sb-cta{padding:var(--sp-4) var(--sp-3);}
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   SISTEMA DE DISEÑO — Antonio Romeo · 2026
+   Esta capa se aplica al final de la hoja e impone orden sobre los
+   valores que se habían ido eligiendo a ojo. No cambia la identidad:
+   misma paleta, mismas tipografías, mismo carácter.
+     · Escala tipográfica modular (razón 1,25)
+     · Ritmo vertical con base 8
+     · Contraste conforme a WCAG AA
+     · Suelo de legibilidad en 11 px
+     · Foco visible y respeto al movimiento reducido
+   ═══════════════════════════════════════════════════════════════════ */
+
+:root{
+  /* Escala tipográfica ───────────────────────────────────── */
+  --fs-xs:   .6875rem;   /* 11px · etiquetas, meta            */
+  --fs-sm:   .8125rem;   /* 13px · fechas, pies               */
+  --fs-base: 1.0625rem;  /* 17px · cuerpo                     */
+  --fs-md:   1.3125rem;  /* 21px · entradilla                 */
+  --fs-lg:   1.625rem;   /* 26px                              */
+  --fs-xl:   2.0625rem;  /* 33px · títulos de sección         */
+  --fs-2xl:  2.5625rem;  /* 41px                              */
+  --fs-3xl:  4rem;       /* 64px · hero                       */
+
+  /* Ritmo vertical ──────────────────────────────────────── */
+  --sp-1:  8px;  --sp-2: 16px;  --sp-3: 24px;  --sp-4: 32px;
+  --sp-5: 48px;  --sp-6: 64px;  --sp-7: 88px;  --sp-8:120px;
+
+  /* Texto sobre fondo tinta — contraste verificado AA ────── */
+  --on-ink-strong: rgba(245,239,224,.95);
+  --on-ink:        rgba(245,239,224,.80);
+  --on-ink-soft:   rgba(245,239,224,.66);
+
+  --focus: #7C3D1E;
+}
+
+/* ── Suelo de legibilidad: nada por debajo de 11 px ───────────────── */
+.hero-eyebrow,.eyebrow,.stat-lbl,.hstrip-eyebrow,.obra-type,.obra-link,
+.link-all,.cf-more,.cs-link,.cc-more,.hero-caption-label,.cx-lbl,
+.cx-series-label,.x-embed-label,.filter-label,.h-tag,.h-date,
+.footer-nav a,.btn-primary,.btn-ghost,.apoyo-btn,.nav-cta,
+.cx-link-main,.cx-link-medium,.hem-stat-lbl{
+  font-size: var(--fs-xs);
+}
+.cc-tag,.cf-tag,.hstrip-tag,.hstrip-medio{
+  font-size: var(--fs-xs);
+  letter-spacing: .14em;
+}
+.cc-date,.hstrip-date,.cf-date,.footer-copy,.apoyo-note{
+  font-size: var(--fs-sm);
+}
+
+/* ── Contraste: los susurros siguen siendo susurros, pero se oyen ── */
+.cf-excerpt,.rss-featured-excerpt,.cx-series-desc{ color: var(--on-ink); }
+.cs-text{ color: var(--on-ink-soft); }
+.cf-date{ color: var(--earth-light); opacity: .88; }
+.footer-nav a{ color: rgba(245,239,224,.68); }
+.footer-copy{ color: rgba(245,239,224,.55); }
+.hstrip-medio{ color: rgba(60,48,37,.62); }
+.nl-check-text,.nl-note{ color: var(--on-ink-soft); }
+.hero-caption-label{ opacity: 1; color: var(--earth-light); }
+
+/* ── Ritmo vertical: un solo sistema de espaciados ────────────────── */
+.cuaderno-section{ padding: var(--sp-7) var(--sp-6); }
+.about-section   { padding: var(--sp-7) var(--sp-6); }
+.hemeroteca-strip{ padding: var(--sp-5) var(--sp-6); }
+.obra-section    { padding: var(--sp-7) var(--sp-6); }
+.apoyo-strip     { padding: var(--sp-5) var(--sp-6); }
+footer           { padding: var(--sp-3) var(--sp-6); }
+@media(max-width:1024px){
+  .cuaderno-section,.about-section,.hemeroteca-strip,
+  .obra-section,.apoyo-strip{ padding-left: var(--sp-4); padding-right: var(--sp-4); }
+  footer{ padding-left: var(--sp-4); padding-right: var(--sp-4); }
+}
+@media(max-width:600px){
+  .cuaderno-section,.about-section,.hemeroteca-strip,
+  .obra-section,.apoyo-strip{ padding-left: var(--sp-3); padding-right: var(--sp-3); }
+  footer{ padding-left: var(--sp-3); padding-right: var(--sp-3); }
+}
+
+/* ── El retrato se ve ─────────────────────────────────────────────── */
+.hero-photo{ filter: contrast(1.04) saturate(.96); }
+.hero-overlay{
+  background: linear-gradient(to right,
+    rgba(20,18,16,.88) 0%,
+    rgba(20,18,16,.30) 20%,
+    rgba(20,18,16,.04) 42%,
+    transparent 60%);
+}
+.hero-right::after{
+  content:''; position:absolute; inset:auto 0 0 0; height:38%;
+  background:linear-gradient(to top, rgba(20,18,16,.75), transparent);
+  pointer-events:none;
+}
+
+/* ── Navegación: decir dónde estás ────────────────────────────────── */
+.nav-links a[aria-current="page"]{ color: var(--earth); position: relative; }
+.nav-links a[aria-current="page"]::after{
+  content:''; position:absolute; left:0; right:0; bottom:-7px;
+  height:1px; background: var(--earth);
+}
+.nav-drawer a[aria-current="page"]{ color: var(--earth); }
+
+/* ── Selector de idioma: visible y pulsable ───────────────────────── */
+.lang-switch a{
+  font-size: var(--fs-xs);
+  color: var(--text-body);
+  font-weight: 500;
+  letter-spacing: .08em;
+}
+.lang-switch a:hover{ color: var(--ink); }
+.lang-switch a.active{ color: var(--ink); font-weight: 700; }
+.lang-switch span{ color: rgba(139,110,78,.45); }
+@media(max-width:1024px){
+  .lang-switch a{
+    min-width: 40px; min-height: 40px;
+    display: inline-flex; align-items: center; justify-content: center;
+    padding: 0 6px;
+  }
+}
+
+/* ── Foco visible: quien navega con teclado sabe dónde está ───────── */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+[tabindex]:focus-visible{
+  outline: 2px solid var(--focus);
+  outline-offset: 3px;
+  border-radius: 1px;
+}
+.cuaderno-featured:focus-visible,
+.cuaderno-card:focus-visible,
+.obra-item:focus-visible,
+.hstrip-item:focus-visible,
+.h-card a:focus-visible{ outline-offset: -2px; }
+
+/* Salto al contenido, para lectores de pantalla */
+.skip-link{
+  position:absolute; left:-9999px; top:0; z-index:9999;
+  background:var(--ink); color:var(--cream);
+  padding:12px 20px; font-size:var(--fs-xs);
+  letter-spacing:.14em; text-transform:uppercase; text-decoration:none;
+}
+.skip-link:focus{ left:0; }
+
+/* ── Movimiento reducido ──────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{
+    animation-duration:.01ms !important;
+    animation-iteration-count:1 !important;
+    transition-duration:.01ms !important;
+    scroll-behavior:auto !important;
+  }
+  .reveal{ opacity:1 !important; transform:none !important; }
+}
+
+/* ── Rendimiento y desbordamiento ─────────────────────────────────── */
+/* La textura de ruido pasa a capa propia: deja de repintarse al hacer
+   scroll. Mismo aspecto, sin coste de batería en móvil.               */
+body::after{
+  transform: translateZ(0);
+  will-change: transform;
+  backface-visibility: hidden;
+}
+/* `overflow-x:hidden` en html/body rompe position:sticky en algunos
+   navegadores — y la barra de navegación es sticky. `clip` no.        */
+html, body{ overflow-x: clip; max-width: 100%; }
+/* Se retira el `max-width:100vw` que se aplicaba a TODOS los div:
+   100vw incluye la barra de scroll y provocaba el desbordamiento
+   que pretendía arreglar.                                             */
+section, header, footer, nav, div{ max-width: none; }
+img, picture, video, iframe{ max-width: 100%; height: auto; }
+.hero-photo, .obra-cover img, .book-cover img{ height: 100%; }
+
+/* ── Enlaces sociales del pie ─────────────────────────────────────── */
+.footer-social{ display:flex; gap: var(--sp-2); align-items:center; }
+.footer-social a{
+  display:inline-flex; align-items:center; justify-content:center;
+  width:36px; height:36px; color: rgba(245,239,224,.62);
+  border:1px solid rgba(139,110,78,.28); transition: all .2s;
+}
+.footer-social a:hover{
+  color: var(--cream); border-color: var(--earth); background: rgba(139,110,78,.16);
+}
+.footer-social svg{ width:15px; height:15px; fill:currentColor; }
+.footer-contact{
+  font-family:'EB Garamond',serif; font-size: var(--fs-sm);
+  color: rgba(245,239,224,.72); text-decoration:none;
+  border-bottom:1px solid rgba(139,110,78,.35);
+}
+.footer-contact:hover{ color: var(--cream); border-bottom-color: var(--earth-light); }
+.footer-col{ display:flex; flex-direction:column; gap: var(--sp-1); align-items:flex-start; }
+@media(max-width:1024px){ .footer-col{ align-items:center; } }
+
+/* ── Botón "Seguir en Medium" de la barra ─────────────────────────── */
+.nav-cta{ display:inline-flex; align-items:center; gap:8px; }
+.nav-cta::before{
+  content:''; width:14px; height:14px; flex-shrink:0;
+  background:currentColor;
+  -webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M13.54 12a6.8 6.8 0 01-6.77 6.82A6.8 6.8 0 010 12a6.8 6.8 0 016.77-6.82A6.8 6.8 0 0113.54 12zM20.96 12c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42 3.38 2.88 3.38 6.42M24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75C23.47 6.25 24 8.83 24 12z'/%3E%3C/svg%3E") center/contain no-repeat;
+          mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M13.54 12a6.8 6.8 0 01-6.77 6.82A6.8 6.8 0 010 12a6.8 6.8 0 016.77-6.82A6.8 6.8 0 0113.54 12zM20.96 12c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42 3.38 2.88 3.38 6.42M24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75C23.47 6.25 24 8.83 24 12z'/%3E%3C/svg%3E") center/contain no-repeat;
+}
+
+/* ── Bloque de café en el pie (ya no compite con nada) ────────────── */
+.apoyo-strip{ background: var(--cream-dark); }
+.apoyo-title{ font-size: clamp(1.375rem, 2.4vw, 1.75rem); }
+
+/* ── Cursiva: EB Garamond sustituye a Cormorant en todas partes ───── */
+.hero-subtitle, .hero-caption-name{ font-family:'EB Garamond', serif; }
+
+/* ── Correcciones de herencia ─────────────────────────────────────── */
+/* `<picture>` es inline por defecto: dentro de un contenedor con altura
+   fija, la imagen colapsaba a 0. `display:contents` la hace transparente. */
+picture{ display: contents; }
+
+/* El selector de elemento `nav{...}` de la barra superior se estaba
+   aplicando también al `<nav>` del pie, que salía como un bloque crema
+   pegajoso. Se acota lo que no debe heredar.                          */
+.footer-nav{
+  position: static; background: none; border: none; box-shadow: none;
+  padding: 0; z-index: auto; justify-content: flex-start; align-items: center;
+}
+
+/* ── Ajustes finos ────────────────────────────────────────────────── */
+.search-wrap{ margin-left: 0; }
+/* Fichas de obra: mismo alto de texto y enlace siempre abajo */
+.obra-desc{
+  display:-webkit-box; -webkit-line-clamp:4; -webkit-box-orient:vertical;
+  overflow:hidden; flex:0 0 auto; min-height:6.6em;
+}
+.obra-link{ margin-top:auto; }
+.obra-item{ height:100%; }
+
+
+/* ── Movil: las portadas, en una columna ──────────────────────────── */
+@media(max-width:600px){
+  .obra-grid{ grid-template-columns:1fr; gap:var(--sp-4); }
+  .obra-item{ flex-direction:row; gap:var(--sp-2); align-items:flex-start; height:auto; }
+  .obra-cover{ width:96px; flex:0 0 96px; aspect-ratio:2/3; margin-bottom:0; height:auto; }
+  .obra-item-text{ flex:1; display:flex; flex-direction:column; }
+  .obra-desc{ min-height:0; -webkit-line-clamp:5; }
+}
+
+
+/* ── Contraste del color tierra ───────────────────────────────────── */
+/* #8B6E4E daba 4,42:1 sobre el papel: justo por debajo del minimo AA
+   (4,5:1). Se oscurece un punto manteniendo exactamente el mismo tono.
+   Resultado: 5,66:1 sobre papel, 4,63:1 sobre crema oscuro y 5,28:1 de
+   crema sobre tierra (las etiquetas). El color sigue siendo el tuyo,
+   solo que ahora se lee.                                              */
+:root{ --earth: #775E43; }
+.h-tag,.cr-tag,.cc-tag,.cf-tag,.hstrip-tag{ background: var(--earth); }
+
+
+/* ── Ultimos restos por debajo del suelo de 11 px ─────────────────── */
+.lang-switch span{ font-size: var(--fs-xs); color: rgba(119,94,67,.62); }
+.ph-eyebrow,.book-type,.btn-amazon,.ch-eyebrow,.ch-medium-link,
+.sb-lbl,.mn-link,.ch-m-dot,.cs-dot,.cx-m-dot{ font-size: var(--fs-xs); }
+/* los dos botones sueltos de la portada, con estilos en linea */
+.cuaderno-section a[style*="font-size:10px"]{ font-size: var(--fs-xs) !important; }
+.cuaderno-section span[style*="font-size:9px"]{ font-size: var(--fs-xs) !important; }
+
+.hem-eyebrow{ font-size: var(--fs-xs); }
+</style>
+
+<meta name="author" content="Antonio Romeo Fernández">
+<meta name="theme-color" content="#FAF7F0">
+<meta name="robots" content="index,follow,max-image-preview:large">
+
+<link rel="canonical" href="https://antonioromeo.work/en/sobre-mi/">
+<link rel="alternate" hreflang="es" href="https://antonioromeo.work/sobre-mi/">
+<link rel="alternate" hreflang="en" href="https://antonioromeo.work/en/sobre-mi/">
+<link rel="alternate" hreflang="pt" href="https://antonioromeo.work/pt/sobre-mi/">
+<link rel="alternate" hreflang="x-default" href="https://antonioromeo.work/sobre-mi/">
+
+<meta name="author" content="Antonio Romeo Fernández">
+<meta name="theme-color" content="#FAF7F0">
+<meta name="robots" content="index,follow,max-image-preview:large">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Antonio Romeo">
+<meta property="og:locale" content="en_GB">
+<meta property="og:locale:alternate" content="es_ES">
+<meta property="og:locale:alternate" content="pt_PT">
+<meta property="og:url" content="https://antonioromeo.work/en/sobre-mi/">
+<meta property="og:title" content="About — Antonio Romeo">
+<meta property="og:description" content="Biography, journalistic career and bibliography of Antonio Romeo Fernández. Contact for commissions and collaborations.">
+<meta property="og:image" content="https://antonioromeo.work/assets/img/og-sobre.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Antonio Romeo, escritor y cronista">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@antonioromeof">
+<meta name="twitter:creator" content="@antonioromeof">
+<meta name="twitter:title" content="About — Antonio Romeo">
+<meta name="twitter:description" content="Biography, journalistic career and bibliography of Antonio Romeo Fernández. Contact for commissions and collaborations.">
+<meta name="twitter:image" content="https://antonioromeo.work/assets/img/og-sobre.jpg">
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Antonio Romeo Fernández","alternateName":"Antonio Romeo","birthPlace":{"@type":"Place","name":"Burgos, España"},"jobTitle":["Escritor","Periodista","Crítico musical"],"description":"Escritor y periodista (Burgos, 1984). Comenzó como letrista de la banda Domador y se consolidó como crítico musical en Diario del Altoaragón, Rockdelux y El Estado Mental. Reside en Portugal.","url":"https://antonioromeo.work/","image":"https://antonioromeo.work/assets/img/antonio-romeo-retrato.jpg","email":"mailto:olzinmospas@pm.me","homeLocation":{"@type":"Place","name":"Portugal"},"knowsLanguage":["es","pt","en"],"sameAs":["https://x.com/antonioromeof","https://medium.com/@olzinmospas","https://0lzinmospas.wordpress.com/"]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"Antonio Romeo","url":"https://antonioromeo.work/","inLanguage":"en","author":{"@type":"Person","name":"Antonio Romeo Fernández"}}</script>
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<!-- NAV -->
+<nav id="nav" aria-label="Main navigation">
+  <a href="/en/" class="nav-logo">Antonio Romeo</a>
+  <ul class="nav-links">
+    <li><a href="/en/obra/">Works</a></li><li><a href="/en/cuaderno/">Notebook</a></li><li><a href="/en/hemeroteca/">Archive</a></li><li><a href="/en/sobre-mi/" aria-current="page">About</a></li>
+    <li><a href="https://medium.com/@olzinmospas" target="_blank" rel="noopener" class="nav-cta">Follow on Medium</a></li>
+  </ul>
+  <button class="nav-hamburger" id="hamburger" aria-label="Menu" aria-expanded="false" aria-controls="navDrawer">
+    <span></span><span></span><span></span>
+  </button>
+  <div class="lang-switch"><a href="/" lang="es">ES</a><span aria-hidden="true">|</span><a href="/en/" lang="en" class="active" aria-current="true">EN</a><span aria-hidden="true">|</span><a href="/pt/" lang="pt">PT</a></div>
+</nav>
+
+<!-- MENÚ MÓVIL -->
+<ul class="nav-drawer" id="navDrawer">
+  <li><a href="/en/obra/">Works</a></li><li><a href="/en/cuaderno/">Notebook</a></li><li><a href="/en/hemeroteca/">Archive</a></li><li><a href="/en/sobre-mi/" aria-current="page">About</a></li>
+  <li><a href="https://medium.com/@olzinmospas" target="_blank" rel="noopener">Follow on Medium</a></li>
+</ul>
+
+<main id="main">
+<header class="sb-hero">
+  <div>
+    <p class="sb-eyebrow">Writer · Chronicler · Journalist</p>
+    <h1 class="sb-name">Antonio<br>Romeo.</h1>
+    <p class="sb-lede">Burgos, 1984. Writing from Portugal.</p>
+  </div>
+  <div class="sb-portrait">
+    <picture>
+      <source srcset="/assets/img/antonio-romeo-retrato.webp" type="image/webp">
+      <img src="/assets/img/antonio-romeo-retrato.jpg" alt="Retrato de Antonio Romeo"
+           width="899" height="1200" fetchpriority="high">
+    </picture>
+  </div>
+</header>
+
+<div class="sb-body">
+  <section class="sb-block">
+    <h2 class="sb-h2">The <em>biography.</em></h2>
+    <p class="sb-p"><strong>Antonio Romeo Fernández</strong> (Burgos, Spain, 1984) began his career as a lyricist for the band <em>Domador</em> and went on to establish himself as a music critic in publications such as <strong>Diario del Altoaragón</strong>, <strong>Rockdelux</strong> and <strong>El Estado Mental</strong>.</p>
+    <p class="sb-p">He has also published several short stories and contributed to a number of collective works. He currently lives in Portugal, where he is working on a new novel.</p>
+    <p class="sb-p">Between 2011 and 2015 he wrote 135 music chronicles, reviews and anti-chronicles: urgent writing about what was playing, what was failing and what deserved to be told. That archive is preserved in full in the <a href="/hemeroteca/">archive</a> of this site (in Spanish).</p>
+  </section>
+
+  <section class="sb-block">
+    <h2 class="sb-h2">The <em>career.</em></h2>
+    <ul class="sb-list">
+      <li><span class="k">Lyricist</span><span class="v">The band <strong>Domador</strong>. His first lyrics.</span></li>
+      <li><span class="k">Music criticism</span><span class="v"><strong>Diario del Altoaragón</strong>, <strong>Rockdelux</strong> and <strong>El Estado Mental</strong>. Concert chronicles, record reviews and anti-chronicles.</span></li>
+      <li><span class="k">Archive</span><span class="v"><strong>135 pieces</strong> published between 2011 and 2015, preserved on this site.</span></li>
+      <li><span class="k">Fiction</span><span class="v">Five books published between 2016 and 2024: four novels and one collection of short stories.</span></li>
+      <li><span class="k">Collective works</span><span class="v">Contributions to various anthologies and joint publications.</span></li>
+      <li><span class="k">Currently</span><span class="v">Living in Portugal. Working on a new novel and publishing openly in the <a href="/en/cuaderno/">Notebook</a>.</span></li>
+    </ul>
+  </section>
+
+  <section class="sb-block">
+    <h2 class="sb-h2">The <em>bibliography.</em></h2>
+    <ul class="sb-books">
+      <li><a href="https://www.amazon.es/dp/B0GPJTQ8WQ" target="_blank" rel="noopener">
+        <span class="t">Montaña</span></a><span class="m">Novel · 2016 · View on Amazon ↗</span></li>
+      <li><a href="https://www.amazon.es/dp/B0GQ2Z54V9" target="_blank" rel="noopener">
+        <span class="t">Las luces de un avión</span></a><span class="m">Novel · 2017 · View on Amazon ↗</span></li>
+      <li><a href="https://www.amazon.es/dp/B09QP9RV3C" target="_blank" rel="noopener">
+        <span class="t">Bajo el cielo rosa</span></a><span class="m">Novel · 2020 · View on Amazon ↗</span></li>
+      <li><a href="https://www.amazon.es/dp/B0GPKJXFZR" target="_blank" rel="noopener">
+        <span class="t">Modelo Standard de Acero y otros relatos</span></a><span class="m">Short stories · 2021 · View on Amazon ↗</span></li>
+      <li><a href="https://www.amazon.es/dp/B0CF4NX5TS" target="_blank" rel="noopener">
+        <span class="t">Los mejores supermercados</span></a><span class="m">Novel · 2024 · View on Amazon ↗</span></li>
+    </ul>
+  </section>
+
+  <section class="sb-block" id="contacto">
+    <h2 class="sb-h2">The <em>contact.</em></h2>
+    <div class="sb-cta">
+      <h3>A commission, an interview, a collaboration?</h3>
+      <p>I write chronicles, criticism and reportage. I work in Spanish, Portuguese and English. For editorial commissions, interviews or any proposal, email is the fastest way.</p>
+      <a class="sb-mail" id="mailtoBig" href="#" data-u="olzinmospas" data-d="pm.me">Write to me</a>
+    </div>
+  </section>
+
+  <section class="sb-block">
+    <h2 class="sb-h2">For the <em>press.</em></h2>
+    <div class="sb-press">
+      <a href="/assets/img/antonio-romeo-retrato.jpg" download>
+        <span class="k">High-resolution portrait</span><span class="v">Download JPG (899 × 1200)</span></a>
+      <a href="https://x.com/antonioromeof" target="_blank" rel="noopener">
+        <span class="k">Profile on X</span><span class="v">@antonioromeof</span></a>
+      <a href="https://medium.com/@olzinmospas" target="_blank" rel="noopener">
+        <span class="k">Writing in the open</span><span class="v">medium.com/@olzinmospas</span></a>
+      <a href="/hemeroteca/" download>
+        <span class="k">Press archive</span><span class="v">135 chronicles, 2011–2015</span></a>
+    </div>
+    <p class="sb-note">Short bio to copy: “Antonio Romeo Fernández (Burgos, Spain, 1984) is a writer and journalist. Music critic at Diario del Altoaragón, Rockdelux and El Estado Mental. Author of five books. He lives in Portugal.”</p>
+  </section>
+</div>
+</main>
+
+<!-- PIE -->
+<footer>
+  <div class="footer-col">
+    <a href="/en/" class="footer-logo">Antonio Romeo</a>
+    <a class="footer-contact" id="mailto" href="#" data-u="olzinmospas" data-d="pm.me">Write to me</a>
+  </div>
+  <nav class="footer-nav" aria-label="Footer">
+    <a href="/en/obra/">Works</a>
+    <a href="/en/cuaderno/">Notebook</a>
+    <a href="/en/hemeroteca/">Archive</a>
+    <a href="/en/sobre-mi/">About</a>
+    <a href="/en/#apoyo">Coffee</a>
+  </nav>
+  <div class="footer-col">
+    <div class="footer-social">
+      <a href="https://x.com/antonioromeof" target="_blank" rel="noopener me" aria-label="Antonio Romeo en X"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.9 2H22l-7.1 8.1L23.2 22h-6.5l-5.1-6.6L5.7 22H2.6l7.6-8.7L1.2 2h6.7l4.6 6.1L18.9 2Zm-1.1 18.1h1.7L7.3 3.8H5.5l12.3 16.3Z"/></svg></a>
+      <a href="https://medium.com/@olzinmospas" target="_blank" rel="noopener me" aria-label="Antonio Romeo en Medium"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.54 12a6.8 6.8 0 0 1-6.77 6.82A6.8 6.8 0 0 1 0 12a6.8 6.8 0 0 1 6.77-6.82A6.8 6.8 0 0 1 13.54 12Zm7.42 0c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42S20.96 8.46 20.96 12ZM24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75S24 8.83 24 12Z"/></svg></a>
+    </div>
+    <p class="footer-copy">© <span data-current-year>2026</span> Antonio Romeo Fernández</p>
+  </div>
+</footer>
+<script>
+var nav = document.getElementById('nav');
+window.addEventListener('scroll', function(){
+  nav.style.boxShadow = window.scrollY > 40 ? '0 4px 30px rgba(20,18,16,.08)' : 'none';
+}, {passive:true});
+var hb = document.getElementById('hamburger'), dr = document.getElementById('navDrawer');
+hb.addEventListener('click', function(){
+  var open = dr.classList.toggle('open');
+  hb.classList.toggle('open', open);
+  hb.setAttribute('aria-expanded', open);
+  document.body.style.overflow = open ? 'hidden' : '';
+});
+dr.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){
+  hb.classList.remove('open'); dr.classList.remove('open');
+  hb.setAttribute('aria-expanded','false'); document.body.style.overflow='';
+});});
+</script>
+<script>
+// Año del pie, siempre al día
+document.querySelectorAll('[data-current-year]').forEach(function(el){
+  el.textContent = new Date().getFullYear();
+});
+// Email ensamblado en el navegador: los robots de spam no lo leen
+(function(){
+  var a = document.getElementById('mailto');
+  if (!a) return;
+  var dir = a.dataset.u + String.fromCharCode(64) + a.dataset.d;
+  a.href = 'mailto:' + dir;
+  a.textContent = dir;
+})();
+</script>
+<script>
+(function(){
+  var b = document.getElementById('mailtoBig');
+  if (b) b.href = 'mailto:' + b.dataset.u + String.fromCharCode(64) + b.dataset.d;
+})();
+</script>
+</body>
+</html>

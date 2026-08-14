@@ -3,13 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="icon" type="image/x-icon" href="../favicon.ico">
-<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
-<link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
-<meta name="description" content="Caderno de Antonio Romeo — Série GE: crónicas pessoais a partir de Portugal. Textos em espanhol e português publicados no Medium.">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<meta name="description" content="Textos, apontamentos e series em curso de Antonio Romeo. Escrita de caderno, publicada em aberto.">
 <title>Caderno — Antonio Romeo</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
 :root{--cream:#F5EFE0;--cream-dark:#EAE0CC;--ink:#141210;--ink-soft:#1C1610;--earth:#8B6E4E;--earth-light:#B8976A;--rust:#7C3D1E;--paper:#FAF7F0;--text-body:#3D3025;--line:rgba(139,110,78,.22);}
 *{margin:0;padding:0;box-sizing:border-box;}html{scroll-behavior:smooth;overflow-x:hidden;max-width:100%;}
@@ -112,28 +116,6 @@ nav{position:sticky;top:0;left:0;right:0;z-index:9000;display:flex;align-items:c
 .mn-link::after{content:'↗';}
 
 /* NEWSLETTER */
-.newsletter-band{background:var(--ink);padding:64px 72px;text-align:center;}
-.nl-wrapper{max-width:520px;margin:0 auto;}
-.nl-title{font-family:'Playfair Display',serif;font-size:clamp(24px,3vw,32px);font-weight:700;color:var(--cream);margin-bottom:10px;}
-.nl-subtitle{font-family:'EB Garamond',serif;font-size:17px;font-style:italic;color:rgba(245,239,224,.48);margin-bottom:32px;}
-.nl-form-row{display:flex;max-width:480px;margin:0 auto;}
-.nl-input{flex:1;padding:14px 18px;background:rgba(255,255,255,.06);border:1px solid rgba(139,110,78,.3);border-right:none;color:var(--cream);font-family:'DM Sans',sans-serif;font-size:13px;outline:none;border-radius:0;}
-.nl-input:focus{border-color:var(--earth-light);}
-.nl-input::placeholder{color:rgba(245,239,224,.3);}
-.nl-btn{padding:14px 24px;background:var(--earth);color:var(--cream);border:none;font-size:10px;letter-spacing:.15em;text-transform:uppercase;font-family:'DM Sans',sans-serif;font-weight:500;cursor:pointer;transition:background .2s;white-space:nowrap;}
-.nl-btn:hover{background:var(--earth-light);}
-.nl-checkbox-row{max-width:480px;margin:16px auto 0;text-align:left;}
-.nl-checkbox-label{display:flex;align-items:flex-start;gap:10px;cursor:pointer;font-size:12px;color:rgba(245,239,224,.4);font-family:'DM Sans',sans-serif;line-height:1.5;}
-.nl-checkbox-label input[type="checkbox"]{display:none;}
-.nl-checkbox-label input[type="checkbox"]:checked + .nl-check-box{background:var(--earth);border-color:var(--earth);}
-.nl-checkbox-label input[type="checkbox"]:checked + .nl-check-box::after{content:'✓';position:absolute;top:-1px;left:3px;color:var(--cream);font-size:13px;font-weight:700;}
-.nl-check-box{display:inline-block;width:18px;height:18px;min-width:18px;border:1px solid rgba(139,110,78,.4);background:rgba(255,255,255,.04);border-radius:2px;position:relative;transition:all .2s;margin-top:1px;}
-.nl-check-text{color:rgba(245,239,224,.45);font-size:12px;}
-.nl-check-text a{color:var(--earth-light);text-decoration:underline;}
-.nl-brevo-legal{font-size:10px;color:rgba(245,239,224,.18);margin-top:8px;}
-.nl-brevo-legal a{color:rgba(245,239,224,.28);text-decoration:underline;}
-.nl-brevo-legal a:hover{color:var(--earth-light);}
-.nl-note{font-size:11px;color:rgba(245,239,224,.28);margin-top:16px;font-style:italic;}
 
 /* FOOTER */
 footer{background:var(--ink);border-top:1px solid rgba(139,110,78,.1);padding:24px 72px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px;}
@@ -155,7 +137,6 @@ footer{background:var(--ink);border-top:1px solid rgba(139,110,78,.1);padding:24
   .skeleton-featured{grid-template-columns:1fr;}
   .sk-img{height:200px;}
   .skeleton-grid{grid-template-columns:repeat(2,1fr);}
-  .newsletter-band{padding:44px 32px;}
   footer{padding:20px 32px;flex-direction:column;text-align:center;}
   .footer-nav{justify-content:center;}
 }
@@ -164,8 +145,6 @@ footer{background:var(--ink);border-top:1px solid rgba(139,110,78,.1);padding:24
   .cuaderno-body{padding:36px 24px 56px;}
   .stats-band{padding:16px 24px;flex-wrap:wrap;gap:16px;}
   .rss-cards-grid,.skeleton-grid{grid-template-columns:1fr;}
-  .nl-form-row{flex-direction:column;}
-  .nl-input{border-right:1px solid rgba(139,110,78,.3);border-bottom:none;}
   footer{padding:20px 24px;}
   nav{padding:14px 20px;}
 }
@@ -202,35 +181,340 @@ section, header, footer, nav, div {
   .lang-switch{margin-right:8px;}
 }
 
-</style>
-<link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css">
 
-<link rel="alternate" hreflang="es" href="https://antonioromeo.es/cuaderno">
-<link rel="alternate" hreflang="en" href="https://antonioromeo.es/en/cuaderno">
-<link rel="alternate" hreflang="pt" href="https://antonioromeo.es/pt/cuaderno">
-<link rel="alternate" hreflang="x-default" href="https://antonioromeo.es/cuaderno">
+/* ═══════════════════════════════════════════════════════════════════
+   SISTEMA DE DISEÑO — Antonio Romeo · 2026
+   Esta capa se aplica al final de la hoja e impone orden sobre los
+   valores que se habían ido eligiendo a ojo. No cambia la identidad:
+   misma paleta, mismas tipografías, mismo carácter.
+     · Escala tipográfica modular (razón 1,25)
+     · Ritmo vertical con base 8
+     · Contraste conforme a WCAG AA
+     · Suelo de legibilidad en 11 px
+     · Foco visible y respeto al movimiento reducido
+   ═══════════════════════════════════════════════════════════════════ */
+
+:root{
+  /* Escala tipográfica ───────────────────────────────────── */
+  --fs-xs:   .6875rem;   /* 11px · etiquetas, meta            */
+  --fs-sm:   .8125rem;   /* 13px · fechas, pies               */
+  --fs-base: 1.0625rem;  /* 17px · cuerpo                     */
+  --fs-md:   1.3125rem;  /* 21px · entradilla                 */
+  --fs-lg:   1.625rem;   /* 26px                              */
+  --fs-xl:   2.0625rem;  /* 33px · títulos de sección         */
+  --fs-2xl:  2.5625rem;  /* 41px                              */
+  --fs-3xl:  4rem;       /* 64px · hero                       */
+
+  /* Ritmo vertical ──────────────────────────────────────── */
+  --sp-1:  8px;  --sp-2: 16px;  --sp-3: 24px;  --sp-4: 32px;
+  --sp-5: 48px;  --sp-6: 64px;  --sp-7: 88px;  --sp-8:120px;
+
+  /* Texto sobre fondo tinta — contraste verificado AA ────── */
+  --on-ink-strong: rgba(245,239,224,.95);
+  --on-ink:        rgba(245,239,224,.80);
+  --on-ink-soft:   rgba(245,239,224,.66);
+
+  --focus: #7C3D1E;
+}
+
+/* ── Suelo de legibilidad: nada por debajo de 11 px ───────────────── */
+.hero-eyebrow,.eyebrow,.stat-lbl,.hstrip-eyebrow,.obra-type,.obra-link,
+.link-all,.cf-more,.cs-link,.cc-more,.hero-caption-label,.cx-lbl,
+.cx-series-label,.x-embed-label,.filter-label,.h-tag,.h-date,
+.footer-nav a,.btn-primary,.btn-ghost,.apoyo-btn,.nav-cta,
+.cx-link-main,.cx-link-medium,.hem-stat-lbl{
+  font-size: var(--fs-xs);
+}
+.cc-tag,.cf-tag,.hstrip-tag,.hstrip-medio{
+  font-size: var(--fs-xs);
+  letter-spacing: .14em;
+}
+.cc-date,.hstrip-date,.cf-date,.footer-copy,.apoyo-note{
+  font-size: var(--fs-sm);
+}
+
+/* ── Contraste: los susurros siguen siendo susurros, pero se oyen ── */
+.cf-excerpt,.rss-featured-excerpt,.cx-series-desc{ color: var(--on-ink); }
+.cs-text{ color: var(--on-ink-soft); }
+.cf-date{ color: var(--earth-light); opacity: .88; }
+.footer-nav a{ color: rgba(245,239,224,.68); }
+.footer-copy{ color: rgba(245,239,224,.55); }
+.hstrip-medio{ color: rgba(60,48,37,.62); }
+.hero-caption-label{ opacity: 1; color: var(--earth-light); }
+
+/* ── Ritmo vertical: un solo sistema de espaciados ────────────────── */
+.cuaderno-section{ padding: var(--sp-7) var(--sp-6); }
+.about-section   { padding: var(--sp-7) var(--sp-6); }
+.hemeroteca-strip{ padding: var(--sp-5) var(--sp-6); }
+.obra-section    { padding: var(--sp-7) var(--sp-6); }
+.apoyo-strip     { padding: var(--sp-5) var(--sp-6); }
+footer           { padding: var(--sp-3) var(--sp-6); }
+@media(max-width:1024px){
+  .cuaderno-section,.about-section,.hemeroteca-strip,
+  .obra-section,.apoyo-strip{ padding-left: var(--sp-4); padding-right: var(--sp-4); }
+  footer{ padding-left: var(--sp-4); padding-right: var(--sp-4); }
+}
+@media(max-width:600px){
+  .cuaderno-section,.about-section,.hemeroteca-strip,
+  .obra-section,.apoyo-strip{ padding-left: var(--sp-3); padding-right: var(--sp-3); }
+  footer{ padding-left: var(--sp-3); padding-right: var(--sp-3); }
+}
+
+/* ── El retrato se ve ─────────────────────────────────────────────── */
+.hero-photo{ filter: contrast(1.04) saturate(.96); }
+.hero-overlay{
+  background: linear-gradient(to right,
+    rgba(20,18,16,.88) 0%,
+    rgba(20,18,16,.30) 20%,
+    rgba(20,18,16,.04) 42%,
+    transparent 60%);
+}
+.hero-right::after{
+  content:''; position:absolute; inset:auto 0 0 0; height:38%;
+  background:linear-gradient(to top, rgba(20,18,16,.75), transparent);
+  pointer-events:none;
+}
+
+/* ── Navegación: decir dónde estás ────────────────────────────────── */
+.nav-links a[aria-current="page"]{ color: var(--earth); position: relative; }
+.nav-links a[aria-current="page"]::after{
+  content:''; position:absolute; left:0; right:0; bottom:-7px;
+  height:1px; background: var(--earth);
+}
+.nav-drawer a[aria-current="page"]{ color: var(--earth); }
+
+/* ── Selector de idioma: visible y pulsable ───────────────────────── */
+.lang-switch a{
+  font-size: var(--fs-xs);
+  color: var(--text-body);
+  font-weight: 500;
+  letter-spacing: .08em;
+}
+.lang-switch a:hover{ color: var(--ink); }
+.lang-switch a.active{ color: var(--ink); font-weight: 700; }
+.lang-switch span{ color: rgba(139,110,78,.45); }
+@media(max-width:1024px){
+  .lang-switch a{
+    min-width: 40px; min-height: 40px;
+    display: inline-flex; align-items: center; justify-content: center;
+    padding: 0 6px;
+  }
+}
+
+/* ── Foco visible: quien navega con teclado sabe dónde está ───────── */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+[tabindex]:focus-visible{
+  outline: 2px solid var(--focus);
+  outline-offset: 3px;
+  border-radius: 1px;
+}
+.cuaderno-featured:focus-visible,
+.cuaderno-card:focus-visible,
+.obra-item:focus-visible,
+.hstrip-item:focus-visible,
+.h-card a:focus-visible{ outline-offset: -2px; }
+
+/* Salto al contenido, para lectores de pantalla */
+.skip-link{
+  position:absolute; left:-9999px; top:0; z-index:9999;
+  background:var(--ink); color:var(--cream);
+  padding:12px 20px; font-size:var(--fs-xs);
+  letter-spacing:.14em; text-transform:uppercase; text-decoration:none;
+}
+.skip-link:focus{ left:0; }
+
+/* ── Movimiento reducido ──────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{
+    animation-duration:.01ms !important;
+    animation-iteration-count:1 !important;
+    transition-duration:.01ms !important;
+    scroll-behavior:auto !important;
+  }
+  .reveal{ opacity:1 !important; transform:none !important; }
+}
+
+/* ── Rendimiento y desbordamiento ─────────────────────────────────── */
+/* La textura de ruido pasa a capa propia: deja de repintarse al hacer
+   scroll. Mismo aspecto, sin coste de batería en móvil.               */
+body::after{
+  transform: translateZ(0);
+  will-change: transform;
+  backface-visibility: hidden;
+}
+/* `overflow-x:hidden` en html/body rompe position:sticky en algunos
+   navegadores — y la barra de navegación es sticky. `clip` no.        */
+html, body{ overflow-x: clip; max-width: 100%; }
+/* Se retira el `max-width:100vw` que se aplicaba a TODOS los div:
+   100vw incluye la barra de scroll y provocaba el desbordamiento
+   que pretendía arreglar.                                             */
+section, header, footer, nav, div{ max-width: none; }
+img, picture, video, iframe{ max-width: 100%; height: auto; }
+.hero-photo, .obra-cover img, .book-cover img{ height: 100%; }
+
+/* ── Enlaces sociales del pie ─────────────────────────────────────── */
+.footer-social{ display:flex; gap: var(--sp-2); align-items:center; }
+.footer-social a{
+  display:inline-flex; align-items:center; justify-content:center;
+  width:36px; height:36px; color: rgba(245,239,224,.62);
+  border:1px solid rgba(139,110,78,.28); transition: all .2s;
+}
+.footer-social a:hover{
+  color: var(--cream); border-color: var(--earth); background: rgba(139,110,78,.16);
+}
+.footer-social svg{ width:15px; height:15px; fill:currentColor; }
+.footer-contact{
+  font-family:'EB Garamond',serif; font-size: var(--fs-sm);
+  color: rgba(245,239,224,.72); text-decoration:none;
+  border-bottom:1px solid rgba(139,110,78,.35);
+}
+.footer-contact:hover{ color: var(--cream); border-bottom-color: var(--earth-light); }
+.footer-col{ display:flex; flex-direction:column; gap: var(--sp-1); align-items:flex-start; }
+@media(max-width:1024px){ .footer-col{ align-items:center; } }
+
+/* ── Botón "Seguir en Medium" de la barra ─────────────────────────── */
+.nav-cta{ display:inline-flex; align-items:center; gap:8px; }
+.nav-cta::before{
+  content:''; width:14px; height:14px; flex-shrink:0;
+  background:currentColor;
+  -webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M13.54 12a6.8 6.8 0 01-6.77 6.82A6.8 6.8 0 010 12a6.8 6.8 0 016.77-6.82A6.8 6.8 0 0113.54 12zM20.96 12c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42 3.38 2.88 3.38 6.42M24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75C23.47 6.25 24 8.83 24 12z'/%3E%3C/svg%3E") center/contain no-repeat;
+          mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M13.54 12a6.8 6.8 0 01-6.77 6.82A6.8 6.8 0 010 12a6.8 6.8 0 016.77-6.82A6.8 6.8 0 0113.54 12zM20.96 12c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42 3.38 2.88 3.38 6.42M24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75C23.47 6.25 24 8.83 24 12z'/%3E%3C/svg%3E") center/contain no-repeat;
+}
+
+/* ── Bloque de café en el pie (ya no compite con nada) ────────────── */
+.apoyo-strip{ background: var(--cream-dark); }
+.apoyo-title{ font-size: clamp(1.375rem, 2.4vw, 1.75rem); }
+
+/* ── Cursiva: EB Garamond sustituye a Cormorant en todas partes ───── */
+.hero-subtitle, .hero-caption-name{ font-family:'EB Garamond', serif; }
+
+/* ── Correcciones de herencia ─────────────────────────────────────── */
+/* `<picture>` es inline por defecto: dentro de un contenedor con altura
+   fija, la imagen colapsaba a 0. `display:contents` la hace transparente. */
+picture{ display: contents; }
+
+/* El selector de elemento `nav{...}` de la barra superior se estaba
+   aplicando también al `<nav>` del pie, que salía como un bloque crema
+   pegajoso. Se acota lo que no debe heredar.                          */
+.footer-nav{
+  position: static; background: none; border: none; box-shadow: none;
+  padding: 0; z-index: auto; justify-content: flex-start; align-items: center;
+}
+
+/* ── Ajustes finos ────────────────────────────────────────────────── */
+.search-wrap{ margin-left: 0; }
+/* Fichas de obra: mismo alto de texto y enlace siempre abajo */
+.obra-desc{
+  display:-webkit-box; -webkit-line-clamp:4; -webkit-box-orient:vertical;
+  overflow:hidden; flex:0 0 auto; min-height:6.6em;
+}
+.obra-link{ margin-top:auto; }
+.obra-item{ height:100%; }
+
+
+/* ── Movil: las portadas, en una columna ──────────────────────────── */
+@media(max-width:600px){
+  .obra-grid{ grid-template-columns:1fr; gap:var(--sp-4); }
+  .obra-item{ flex-direction:row; gap:var(--sp-2); align-items:flex-start; height:auto; }
+  .obra-cover{ width:96px; flex:0 0 96px; aspect-ratio:2/3; margin-bottom:0; height:auto; }
+  .obra-item-text{ flex:1; display:flex; flex-direction:column; }
+  .obra-desc{ min-height:0; -webkit-line-clamp:5; }
+}
+
+
+/* ── Contraste del color tierra ───────────────────────────────────── */
+/* #8B6E4E daba 4,42:1 sobre el papel: justo por debajo del minimo AA
+   (4,5:1). Se oscurece un punto manteniendo exactamente el mismo tono.
+   Resultado: 5,66:1 sobre papel, 4,63:1 sobre crema oscuro y 5,28:1 de
+   crema sobre tierra (las etiquetas). El color sigue siendo el tuyo,
+   solo que ahora se lee.                                              */
+:root{ --earth: #775E43; }
+.h-tag,.cr-tag,.cc-tag,.cf-tag,.hstrip-tag{ background: var(--earth); }
+
+
+/* ── Ultimos restos por debajo del suelo de 11 px ─────────────────── */
+.lang-switch span{ font-size: var(--fs-xs); color: rgba(119,94,67,.62); }
+.ph-eyebrow,.book-type,.btn-amazon,.ch-eyebrow,.ch-medium-link,
+.sb-lbl,.mn-link,.ch-m-dot,.cs-dot,.cx-m-dot{ font-size: var(--fs-xs); }
+/* los dos botones sueltos de la portada, con estilos en linea */
+.cuaderno-section a[style*="font-size:10px"]{ font-size: var(--fs-xs) !important; }
+.cuaderno-section span[style*="font-size:9px"]{ font-size: var(--fs-xs) !important; }
+
+.hem-eyebrow{ font-size: var(--fs-xs); }
+</style>
+
+<meta name="author" content="Antonio Romeo Fernández">
+<meta name="theme-color" content="#FAF7F0">
+<meta name="robots" content="index,follow,max-image-preview:large">
+
+<meta name="author" content="Antonio Romeo Fernández">
+<meta name="theme-color" content="#FAF7F0">
+<meta name="robots" content="index,follow,max-image-preview:large">
+
+<meta name="author" content="Antonio Romeo Fernández">
+<meta name="theme-color" content="#FAF7F0">
+<meta name="robots" content="index,follow,max-image-preview:large">
+
+<link rel="canonical" href="https://antonioromeo.work/pt/cuaderno/">
+<link rel="alternate" hreflang="es" href="https://antonioromeo.work/cuaderno/">
+<link rel="alternate" hreflang="en" href="https://antonioromeo.work/en/cuaderno/">
+<link rel="alternate" hreflang="pt" href="https://antonioromeo.work/pt/cuaderno/">
+<link rel="alternate" hreflang="x-default" href="https://antonioromeo.work/cuaderno/">
+
+<meta name="author" content="Antonio Romeo Fernández">
+<meta name="theme-color" content="#FAF7F0">
+<meta name="robots" content="index,follow,max-image-preview:large">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Antonio Romeo">
+<meta property="og:locale" content="pt_PT">
+<meta property="og:locale:alternate" content="es_ES">
+<meta property="og:locale:alternate" content="en_GB">
+<meta property="og:url" content="https://antonioromeo.work/pt/cuaderno/">
+<meta property="og:title" content="Caderno — Antonio Romeo">
+<meta property="og:description" content="Textos, apontamentos e series em curso de Antonio Romeo. Escrita de caderno, publicada em aberto.">
+<meta property="og:image" content="https://antonioromeo.work/assets/img/og-cuaderno.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Antonio Romeo, escritor y cronista">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@antonioromeof">
+<meta name="twitter:creator" content="@antonioromeof">
+<meta name="twitter:title" content="Caderno — Antonio Romeo">
+<meta name="twitter:description" content="Textos, apontamentos e series em curso de Antonio Romeo. Escrita de caderno, publicada em aberto.">
+<meta name="twitter:image" content="https://antonioromeo.work/assets/img/og-cuaderno.jpg">
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"Antonio Romeo","url":"https://antonioromeo.work/","inLanguage":"pt","author":{"@type":"Person","name":"Antonio Romeo Fernández"}}</script>
 </head>
 <body>
 
-<nav id="nav">
-  <a href="../index.html" class="nav-logo">Antonio Romeo</a>
+<a class="skip-link" href="#main">Ir para o conteúdo</a>
+
+<!-- NAV -->
+<nav id="nav" aria-label="Navegação principal">
+  <a href="/pt/" class="nav-logo">Antonio Romeo</a>
   <ul class="nav-links">
-    <li><a href="index.html" class="active">Caderno</a></li>
-    <li><a href="../hemeroteca/index.html">Hemeroteca</a></li>
-    <li><a href="../obra/index.html">Obra</a></li>
-    <li><a href="../index.html#newsletter" class="nav-cta">Avisa-me</a></li>
+    <li><a href="/pt/obra/">Obra</a></li><li><a href="/pt/cuaderno/" aria-current="page">Caderno</a></li><li><a href="/pt/hemeroteca/">Hemeroteca</a></li><li><a href="/pt/sobre-mi/">Sobre mim</a></li>
+    <li><a href="https://medium.com/@olzinmospas" target="_blank" rel="noopener" class="nav-cta">Seguir no Medium</a></li>
   </ul>
-  <button class="nav-hamburger" id="hamburger" aria-label="Menú">
+  <button class="nav-hamburger" id="hamburger" aria-label="Menu" aria-expanded="false" aria-controls="navDrawer">
     <span></span><span></span><span></span>
   </button>
-<div class="lang-switch"><a href="../../cuaderno/index.html">ES</a><span>|</span><a href="../../en/cuaderno/index.html">EN</a><span>|</span><a href="index.html" class="active">PT</a></div>
+  <div class="lang-switch"><a href="/" lang="es">ES</a><span aria-hidden="true">|</span><a href="/en/" lang="en">EN</a><span aria-hidden="true">|</span><a href="/pt/" lang="pt" class="active" aria-current="true">PT</a></div>
 </nav>
+
+<!-- MENÚ MÓVIL -->
 <ul class="nav-drawer" id="navDrawer">
-  <li><a href="index.html">Caderno</a></li>
-  <li><a href="../hemeroteca/index.html">Hemeroteca</a></li>
-  <li><a href="../obra/index.html">Obra</a></li>
-  <li><a href="../index.html#newsletter">Avisa-me</a></li>
+  <li><a href="/pt/obra/">Obra</a></li><li><a href="/pt/cuaderno/" aria-current="page">Caderno</a></li><li><a href="/pt/hemeroteca/">Hemeroteca</a></li><li><a href="/pt/sobre-mi/">Sobre mim</a></li>
+  <li><a href="https://medium.com/@olzinmospas" target="_blank" rel="noopener">Seguir no Medium</a></li>
 </ul>
+
+<main id="main">
 
 <!-- HEADER -->
 <header class="cuaderno-header">
@@ -297,63 +581,29 @@ section, header, footer, nav, div {
 </div>
 
 <!-- NEWSLETTER -->
-<section class="newsletter-band" id="newsletter">
-  <div class="nl-wrapper">
-    <h2 class="nl-title">Não percas nada.</h2>
-    <p class="nl-subtitle">Novas entradas do Caderno e notícias do autor.</p>
 
-    <!-- Brevo Form -->
-    <div class="sib-form" style="text-align:center;">
-      <div id="sib-form-container" class="sib-form-container">
-        <div id="error-message" class="sib-form-message-panel" style="font-size:14px; text-align:center; font-family:'DM Sans',sans-serif; color:#ff6b6b; background-color:rgba(255,107,107,.1); border-radius:3px; border:1px solid rgba(255,107,107,.3); max-width:480px; margin:0 auto 16px; display:none;">
-          <div class="sib-form-message-panel__text sib-form-message-panel__text--center">
-            <span class="sib-form-message-panel__inner-text">No hemos podido validar su suscripción.</span>
-          </div>
-        </div>
-        <div id="success-message" class="sib-form-message-panel" style="font-size:14px; text-align:center; font-family:'DM Sans',sans-serif; color:#5cb85c; background-color:rgba(92,184,92,.1); border-radius:3px; border:1px solid rgba(92,184,92,.3); max-width:480px; margin:0 auto 16px; display:none;">
-          <div class="sib-form-message-panel__text sib-form-message-panel__text--center">
-            <span class="sib-form-message-panel__inner-text">✓ Inscrito! Entraremos em contacto em breve.</span>
-          </div>
-        </div>
-        <div id="sib-container" class="sib-container--large sib-container--vertical" style="text-align:center; background-color:transparent; max-width:480px; margin:0 auto; border:none; direction:ltr;">
-          <form id="sib-form" method="POST" action="https://e3522075.sibforms.com/serve/MUIFADd3_f9VW6LnHG5yUSAvCKzBhwuw07QRv64dgcZzKAtMn4ydgwhRUjRl6OFIbDpeLLx-lKKoeIt2v5km91HlIsuqaPTxdMzApw4amrf9Z-eQkc6jrnoUp-hBkcD-HcULjiTjtLLb8asXVe5JgjthnBiaWIufydk4wRB-FaTynMW9BqVTPn9meADoHAqGqiFFxBx9k91a3eCkDw==" data-type="subscription">
-            <div class="nl-form-row">
-              <input class="nl-input" type="email" id="EMAIL" name="EMAIL" autocomplete="email" placeholder="o-teu@email.com" data-required="true" required />
-              <button class="nl-btn" type="submit" form="sib-form">
-                <svg class="icon clickable__icon progress-indicator__icon sib-hide-loader-icon" viewBox="0 0 512 512" style="width:16px;height:16px;display:none;">
-                  <path d="M460.116 373.846l-20.823-12.022c-5.541-3.199-7.54-10.159-4.663-15.874 30.137-59.886 28.343-131.652-5.386-189.946-33.641-58.394-94.896-95.833-161.827-99.676C261.028 55.961 256 50.751 256 44.352V20.309c0-6.904 5.808-12.337 12.703-11.982 83.556 4.306 160.163 50.864 202.11 123.677 42.063 72.696 44.079 162.316 6.031 236.832-3.14 6.148-10.75 8.461-16.728 5.01z" fill="currentColor"/>
-                </svg>
-                Subscrever
-              </button>
-            </div>
-            <div class="nl-checkbox-row">
-              <label class="nl-checkbox-label">
-                <input type="checkbox" class="input_replaced" value="1" id="OPT_IN" name="OPT_IN" required />
-                <span class="nl-check-box"></span>
-                <span class="nl-check-text">Acepto las condiciones y recibir tus newsletters.</span>
-              </label>
-            </div>
-            <input type="text" name="email_address_check" value="" class="input--hidden" style="display:none;">
-            <input type="hidden" name="locale" value="es">
-          </form>
-        </div>
-      </div>
-    </div>
+</main>
 
-    <p class="nl-note">Sem spam. Só o que importa, quando importa.</p>
-    <p class="nl-brevo-legal">Usamos <a href="https://www.brevo.com/es/" target="_blank" rel="noopener">Brevo</a> como plataforma de marketing. <a href="https://www.brevo.com/es/legal/privacypolicy/" target="_blank" rel="noopener">Política de privacidad</a>.</p>
-  </div>
-</section>
-
+<!-- PIE -->
 <footer>
-  <a href="../index.html" class="footer-logo">Antonio Romeo</a>
-  <nav class="footer-nav">
-    <a href="index.html">Caderno</a>
-    <a href="../hemeroteca/index.html">Hemeroteca</a>
-    <a href="../obra/index.html">Obra</a>
-    <a href="../index.html#newsletter">Contacto</a>
+  <div class="footer-col">
+    <a href="/pt/" class="footer-logo">Antonio Romeo</a>
+    <a class="footer-contact" id="mailto" href="#" data-u="olzinmospas" data-d="pm.me">Escreva-me</a>
+  </div>
+  <nav class="footer-nav" aria-label="Rodapé">
+    <a href="/pt/obra/">Obra</a>
+    <a href="/pt/cuaderno/">Caderno</a>
+    <a href="/pt/hemeroteca/">Hemeroteca</a>
+    <a href="/pt/sobre-mi/">Sobre mim</a>
+    <a href="/pt/#apoyo">Café</a>
   </nav>
-  <p class="footer-copy">© 2026 Antonio Romeo Fernández</p>
+  <div class="footer-col">
+    <div class="footer-social">
+      <a href="https://x.com/antonioromeof" target="_blank" rel="noopener me" aria-label="Antonio Romeo en X"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.9 2H22l-7.1 8.1L23.2 22h-6.5l-5.1-6.6L5.7 22H2.6l7.6-8.7L1.2 2h6.7l4.6 6.1L18.9 2Zm-1.1 18.1h1.7L7.3 3.8H5.5l12.3 16.3Z"/></svg></a>
+      <a href="https://medium.com/@olzinmospas" target="_blank" rel="noopener me" aria-label="Antonio Romeo en Medium"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.54 12a6.8 6.8 0 0 1-6.77 6.82A6.8 6.8 0 0 1 0 12a6.8 6.8 0 0 1 6.77-6.82A6.8 6.8 0 0 1 13.54 12Zm7.42 0c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42S20.96 8.46 20.96 12ZM24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75S24 8.83 24 12Z"/></svg></a>
+    </div>
+    <p class="footer-copy">© <span data-current-year>2026</span> Antonio Romeo Fernández</p>
+  </div>
 </footer>
 
 <script>
@@ -431,7 +681,8 @@ drawer.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
     if (!layout) return;
 
     if (!items || items.length === 0) {
-      layout.innerHTML = '<p style="color:var(--earth);font-family:EB Garamond,serif;font-style:italic;padding:32px;">Não foi possível carregar os textos. <a href="https://medium.com/@olzinmospas" target="_blank" style="color:var(--earth-light)">Ver no Medium →</a></p>';
+      // El feed no responde: se conserva el contenido estatico que ya
+      // esta en el HTML en lugar de vaciar la seccion.
       return;
     }
 
@@ -474,7 +725,8 @@ drawer.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
     if (!grid) return;
 
     if (!items || items.length === 0) {
-      grid.innerHTML = '<p style="grid-column:1/-1;color:var(--earth);font-family:EB Garamond,serif;font-style:italic;padding:32px 0;">Não foi possível carregar os textos. <a href="https://medium.com/@olzinmospas" target="_blank" style="color:var(--earth)">Ver no Medium →</a></p>';
+      // El feed no responde: se conserva el contenido estatico que ya
+      // esta en el HTML en lugar de vaciar la seccion.
       return;
     }
 
@@ -561,22 +813,18 @@ drawer.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
 
 </script>
 <script>
-// ── BREVO NEWSLETTER INTEGRATION ──────────────────────────────
-window.REQUIRED_CODE_ERROR_MESSAGE = 'Elija un código de país';
-window.LOCALE = 'es';
-window.EMAIL_INVALID_MESSAGE = window.SMS_INVALID_MESSAGE = "La información que ha proporcionado no es válida. Compruebe el formato del campo e inténtelo de nuevo.";
-window.REQUIRED_ERROR_MESSAGE = "Este campo no puede quedarse vacío. ";
-window.GENERIC_INVALID_MESSAGE = "La información que ha proporcionado no es válida. Compruebe el formato del campo e inténtelo de nuevo.";
-window.translation = {
-  common: {
-    selectedList: '{quantity} lista seleccionada',
-    selectedLists: '{quantity} listas seleccionadas',
-    selectedOption: '{quantity} seleccionado',
-    selectedOptions: '{quantity} seleccionados',
-  }
-};
-var AUTOHIDE = Boolean(0);
+// Año del pie, siempre al día
+document.querySelectorAll('[data-current-year]').forEach(function(el){
+  el.textContent = new Date().getFullYear();
+});
+// Email ensamblado en el navegador: los robots de spam no lo leen
+(function(){
+  var a = document.getElementById('mailto');
+  if (!a) return;
+  var dir = a.dataset.u + String.fromCharCode(64) + a.dataset.d;
+  a.href = 'mailto:' + dir;
+  a.textContent = dir;
+})();
 </script>
-<script defer src="https://sibforms.com/forms/end-form/build/main.js"></script>
 </body>
 </html>
